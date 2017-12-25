@@ -14,9 +14,24 @@ instance = new Palindrome();
     }
 
     @Test
-    public void TestPalindrome() {
+    public void testPalindrome() {
         Assert.assertTrue(instance.isPalindrome("dad"));
 
+    }
+
+    @Test
+    public void testPalindromeWord() {
+        Assert.assertTrue(instance.isPalindrome("Able was I, ere I saw Elba!"));
+    }
+
+    @Test
+    public void testisNotPalindrome() {
+        Assert.assertFalse(instance.isPalindrome("daw"));
+    }
+
+    @Test
+    public void testIsNotPalindromeWord() {
+        Assert.assertFalse(instance.isPalindrome("Able was a, ere I saw Elba!"));
     }
 
 }
