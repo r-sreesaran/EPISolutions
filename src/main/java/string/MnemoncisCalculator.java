@@ -15,7 +15,7 @@ public class MnemoncisCalculator {
         return numberList;
     }
 
-    private static void computeMnemonics(String phoneNumber, String mnemonics, List<String> numberList) {
+     static void computeMnemonics(String phoneNumber, String mnemonics, List<String> numberList) {
         if (phoneNumber.equals("")) {
             numberList.add(mnemonics);
         } else {
@@ -31,8 +31,9 @@ public class MnemoncisCalculator {
         }
     }
 
+
     static {
-        Map<Character, Optional<List<Character>>> map = new HashMap<>();
+       final Map<Character, Optional<List<Character>>> map = new HashMap<>();
         map.put('1', Optional.empty());
         map.put('2', Optional.of(Arrays.asList('A', 'B', 'C')));
         map.put('3', Optional.of(Arrays.asList('D', 'E', 'F')));
@@ -45,7 +46,10 @@ public class MnemoncisCalculator {
         map.put('*', Optional.empty());
         map.put('0', Optional.empty());
         map.put('#', Optional.empty());
-        keyMappings = Collections.unmodifiableMap(map);
+        keyMappings = map;
     }
 
+    static {
+        System.out.println("This is test block");
+    }
 }

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -21,13 +22,7 @@ public class TestMnemonicsCalculator {
         test(expectedResults, phoneNumber);
     }
 
-    @Test
-    public void computeMnemonics2() {
-        phoneNumber = "5387739";
-        expectedResults = Arrays.asList("JETPREY", "LETSSEX", "JETSPEW");
 
-        test(expectedResults, phoneNumber);
-    }
 
     private void test(List<String> expectedResults, String phoneNumber) {
         List<String> actualResults = MnemoncisCalculator.computeMnemonics(phoneNumber);
