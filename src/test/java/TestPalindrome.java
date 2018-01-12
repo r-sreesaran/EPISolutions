@@ -1,6 +1,5 @@
-package test.java;
 
-import main.java.string.Palindrome;
+import string.Palindrome;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
