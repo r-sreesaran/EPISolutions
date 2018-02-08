@@ -23,7 +23,7 @@ public class ListNode<T> {
         ListNode<T> iter = this;
         while(iter!=null) {
             if(visited.contains(iter)) {
-                result.append(" Loop back to " +iter.data.toString());
+                result.append(" End");
                 break;
             }
             visited.add(iter);
