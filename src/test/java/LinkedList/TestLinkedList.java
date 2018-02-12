@@ -26,7 +26,7 @@ public class TestLinkedList {
         ListNode<Integer> ll4 = new ListNode<Integer>(8,ll5);
 
         MergeOrderedList mergeOperations = new MergeOrderedList();
-        ListNode<Integer> mergerdNodes = MergeOrderedList.mergeList(ll3,ll6);
+        ListNode<Integer> mergerdNodes = MergeOrderedList.mergeList(ll1,ll4);
 
         ListNode<Integer> temp = null;
         int i=0;

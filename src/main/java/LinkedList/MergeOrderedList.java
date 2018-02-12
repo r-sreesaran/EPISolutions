@@ -12,7 +12,7 @@ ListNode<Integer> current = intial;
 
 while(p1!=null && p2!=null) {
     if(p1.data<= p2.data) {
-        current.next =p2;
+        current.next =p1;
         p1=p1.next;
     }
     else  {
@@ -24,7 +24,7 @@ while(p1!=null && p2!=null) {
 
 // Appends the remaining nodes of p1 or p2.
         current.next = p1 != null ? p1 : p2;
-        return intial.next;
+        return intial;
     }
 
 
