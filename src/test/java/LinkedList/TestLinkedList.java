@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 public class TestLinkedList {
 
+
     @Test
     public void checkNodeIsAdded() {
         ListNode<Integer> ll3 = new ListNode<Integer>(3,null);
@@ -27,9 +28,15 @@ public class TestLinkedList {
         MergeOrderedList mergeOperations = new MergeOrderedList();
         ListNode<Integer> mergerdNodes = MergeOrderedList.mergeList(ll3,ll6);
 
+        ListNode<Integer> temp = null;
+        int i=0;
         while(mergerdNodes.next!=null) {
+i++;
 
+        temp =  mergerdNodes.next;
+            mergerdNodes = temp;
         }
+        Assert.assertEquals(6,i);
     }
 
 }
