@@ -51,5 +51,16 @@ public class ListNode<T> {
         return result.toString();
     }
 
+    public static int countNodes(ListNode<Integer> mergerdNodes) {
+        int i=0;
+        ListNode<Integer> temp = null;
+        while(mergerdNodes.next!=null) {
+            i++;
+            temp =  mergerdNodes.next;
+            mergerdNodes = temp;
+        }
+        return i;
+    }
+
 
 }

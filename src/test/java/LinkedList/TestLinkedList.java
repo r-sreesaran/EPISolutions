@@ -29,14 +29,8 @@ public class TestLinkedList {
         ListNode<Integer> mergerdNodes = MergeOrderedList.mergeList(ll1,ll4);
 
         ListNode<Integer> temp = null;
-        int i=0;
-        while(mergerdNodes.next!=null) {
-i++;
 
-        temp =  mergerdNodes.next;
-            mergerdNodes = temp;
-        }
-        Assert.assertEquals(6,i);
+        Assert.assertEquals(6,ListNode.countNodes(mergerdNodes));
     }
 
 }
