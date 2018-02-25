@@ -52,7 +52,7 @@ public class ListNode<T> {
     }
 
     public static int countNodes(ListNode<Integer> mergerdNodes) {
-        int i=0;
+        int i=1;
         ListNode<Integer> temp = null;
         while(mergerdNodes.next!=null) {
             i++;

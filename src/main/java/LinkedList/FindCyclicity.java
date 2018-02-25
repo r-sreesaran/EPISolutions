@@ -9,12 +9,13 @@ public class FindCyclicity {
         ListNode<Integer> slow = list;
         ListNode<Integer> fast = list;
 
-        while(fast.next!= null | fast!=null) {
-            if(slow ==fast) {
-return "loop found";
-            }
+        while(fast.next!=null && fast!=null) {
             slow = slow.next;
             fast = fast.next.next;
+
+            if(slow == fast) {
+              return "loop found";
+            }
         }
         return "no Loops";
     }
