@@ -33,4 +33,16 @@ public class TestLinkedList {
         Assert.assertEquals(6,ListNode.countNodes(mergerdNodes));
     }
 
+    @Test
+    public void deleteKthNode() {
+        ListNode<Integer> ll5 = new ListNode<Integer>(5,null);
+        ListNode<Integer> ll4 = new ListNode<Integer>(4,ll5);
+        ListNode<Integer> ll3 = new ListNode<Integer>(3,ll4);
+        ListNode<Integer> ll2 = new ListNode<Integer>(2,ll3);
+        ListNode<Integer> ll1 = new ListNode<Integer>(1,ll2);
+
+
+        Assert.assertEquals(ListNode.countNodes(ListNode.deleteKthNode(ll1,2)),4);
+    }
+
 }

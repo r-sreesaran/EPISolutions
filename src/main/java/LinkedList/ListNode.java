@@ -62,5 +62,18 @@ public class ListNode<T> {
         return i;
     }
 
+    public static ListNode<Integer> deleteKthNode(ListNode<Integer> node, Integer k) {
+       while(k-1>1) {
+           node = node.next;
+           k--;
+       }
+
+       node.data = node.next.data;
+       node.next = node.next.next;
+
+
+        return node;
+    }
+
 
 }
