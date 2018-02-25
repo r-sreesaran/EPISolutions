@@ -6,7 +6,7 @@ public class ReverseLinkedList {
 
     public ListNode<Integer> reverse(ListNode<Integer> head) {
 
-        if (head == null || head.next == null) {
+        if (head.next == null ) {
             return head;
         }
 
