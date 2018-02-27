@@ -43,6 +43,7 @@ public class TestLinkedList {
 
 
         Assert.assertEquals(ListNode.countNodes(ListNode.deleteKthNode(ll1,2)),4);
+        Assert.assertEquals(ll1.data.toString(),"2");
     }
 
 }
