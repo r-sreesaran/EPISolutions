@@ -17,12 +17,12 @@ public class TestStackImplementation {
     }
 
 
-    @Test
+    @Test(priority = 0)
     public void testStackLength() {
         Assert.assertEquals(stack.getSize(),3);
     }
 
-    @Test
+    @Test(priority = 1)
     public void testPop() {
         int data =  stack.pop();
         Assert.assertEquals(data,3);
