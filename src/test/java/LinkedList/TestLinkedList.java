@@ -15,7 +15,7 @@ public class TestLinkedList {
         Assert.assertEquals(ll1.toString(),"1->2->3 End");
     }
 
-    @Test(priority = 1)
+  /*  @Test(priority = 1)
     public void mergeTwoNodes() {
         ListNode<Integer> ll3 = new ListNode<Integer>(6,null);
         ListNode<Integer> ll2 = new ListNode<Integer>(3,ll3);
@@ -44,6 +44,6 @@ public class TestLinkedList {
 
         Assert.assertEquals(ListNode.countNodes(ListNode.deleteKthNode(ll1,2)),4);
         Assert.assertEquals("3",ll1.next.data.toString());
-    }
+    }*/
 
 }
