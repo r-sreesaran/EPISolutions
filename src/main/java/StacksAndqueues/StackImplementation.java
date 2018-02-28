@@ -1,25 +1,49 @@
 package StacksAndqueues;
 
+import java.util.Deque;
 import java.util.LinkedList;
 
 public class StackImplementation {
 
-    LinkedList<Object> stack = new LinkedList();
+    // @include
+    private static class ElementWithCachedMax {
+        public Integer element;
+        public Integer max;
 
-    public void StackImplementation(LinkedList data) {
-stack = data;
+        public ElementWithCachedMax(Integer element, Integer max) {
+            this.element = element;
+            this.max = max;
+        }
     }
 
-    public void push() {
+    public static class Stack {
+        // Stores (element, cached maximum) pair.
+        private Deque<ElementWithCachedMax> elementWithCachedMax
+                = new LinkedList<>();
+
+        public boolean empty() {
+            return elementWithCachedMax.isEmpty();
+        }
+
+        public Integer max() {
+            if (empty()) {
+                throw new IllegalStateException("max(): empty stack");
+            }
+            return elementWithCachedMax.peek().max;
+        }
+
+        public Integer pop() {
+            if (empty()) {
+                throw new IllegalStateException("pop(): empty stack");
+            }
+            return elementWithCachedMax.removeFirst().element;
+        }
+
+        public void push(Integer x) {
+            elementWithCachedMax.addFirst(
+                    new ElementWithCachedMax(x, Math.max(x, empty() ? x : max())));
+        }
+
 
     }
-
-    public void pop() {
-
-    }
-
-    public void peek() {
-
-    }
-
 }
