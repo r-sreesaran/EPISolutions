@@ -13,7 +13,7 @@ public class TestDeleteNode {
         ListNode node1 = new ListNode(1, node2);
 
         ListNode deletednode = DeleteNode.delete(node1);
-        Assert.assertEquals(2, ListNode.countNodes(deletednode));
+        Assert.assertEquals(ListNode.countNodes(deletednode),2 );
     }
 }
 
