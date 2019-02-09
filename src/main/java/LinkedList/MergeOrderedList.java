@@ -10,11 +10,10 @@ ListNode<Integer> intial = new ListNode<>(0,null);
 ListNode<Integer> current = intial;
         ListNode<Integer> p1=L1, p2=L2;
 
-while(p1==null && p2==null) {
+while(p1!=null && p2!=null) {
     if(p1.data<= p2.data) {
         current.next =p2;
         p1=p1.next;
-
     }
     else  {
         current.next = p2;
@@ -27,4 +26,7 @@ while(p1==null && p2==null) {
         current.next = p1 != null ? p1 : p2;
         return intial.next;
     }
+
+
+   
 }

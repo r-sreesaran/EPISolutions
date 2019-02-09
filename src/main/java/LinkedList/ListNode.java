@@ -9,6 +9,22 @@ public class ListNode<T> {
     public T data;
     public ListNode<T> next;
 
+    /**
+     * List operations
+     * IsEmpty
+     * IsLast
+     * Insert
+     * Delete
+     * Header
+     *  Position First
+     *  Posititon Adavance
+     *  Position Header
+     *  position Find
+     *  position FindPrevious
+     *
+     * @param data
+     * @param next
+     */
 
 
     public  ListNode(T data, ListNode<T> next) {
@@ -34,4 +50,6 @@ public class ListNode<T> {
         }
         return result.toString();
     }
+
+
 }

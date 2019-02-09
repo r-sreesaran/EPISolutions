@@ -23,7 +23,13 @@ public class TestLinkedList {
         ListNode<Integer> ll6 = new ListNode<Integer>(11,null);
         ListNode<Integer> ll5 = new ListNode<Integer>(9,ll6);
         ListNode<Integer> ll4 = new ListNode<Integer>(8,ll5);
-        
+
+        MergeOrderedList mergeOperations = new MergeOrderedList();
+        ListNode<Integer> mergerdNodes = MergeOrderedList.mergeList(ll3,ll6);
+
+        while(mergerdNodes.next!=null) {
+
+        }
     }
 
 }
